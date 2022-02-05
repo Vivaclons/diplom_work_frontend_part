@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "Name": "user",
+      "Surname": "user",
+      "userName": "user",
+      "password": "user123",
+      "id": 3
+    },
+    {
+      "Name": "user1",
+      "Surname": "user1",
+      "userName": "user1",
+      "password": "user123",
+      "id": 4
+    },
+    {
+      "Name": "Shynggys",
+      "Surname": "Yerkyn",
+      "userName": "shyngyse",
+      "password": "password",
+      "id": 5
+    },
+    {
+      "Name": "tdrycfgvuhb",
+      "Surname": "ytuvgbhijnl",
+      "userName": "tfuvygibhjonk",
+      "password": "tuvihbjonl",
+      "id": 6
+    }
+  ],
+  "admin": [
+    {
+      "id": 1,
+      "adminName": "admin",
+      "password": "password"
+    },
+    {
+      "id": 2,
+      "adminName": "admin1",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "adminName": "admin2",
+      "password": "password"
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "nameRole": "Family"
+    },
+    {
+      "id": 2,
+      "nameRole": "Individual"
+    },
+    {
+      "id": 3,
+      "nameRole": "Student"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 5,
+      "name": "Belivier",
+      "Author": "Imagine Dragons",
+      "Year": "2018",
+      "min": "3:14"
+    },
+    {
+      "id": 7,
+      "name": "Bat at Love",
+      "Author": "Halsey",
+      "Year": "2018",
+      "min": "2:46"
+    },
+    {
+      "name": "Graveyard",
+      "Author": "Halsey",
+      "Year": "2020",
+      "min": "3:14",
+      "id": 9
+    }
+  ]
+}
