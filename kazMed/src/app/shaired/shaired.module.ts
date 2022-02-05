@@ -6,6 +6,7 @@ import {SignUpComponent} from "./sign-up/sign-up.component";
 import {MatDialogModule} from "@angular/material/dialog";
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from "@angular/router";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 
@@ -25,7 +26,8 @@ import {RouterModule} from "@angular/router";
   imports: [
     CommonModule,
     MatDialogModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule
 
 
   ]

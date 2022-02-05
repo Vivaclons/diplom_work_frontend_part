@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog} from "@angular/material/dialog";
-import {SignUpComponent} from "../sign-up/sign-up.component";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../auth.service";
+import {SignUpComponent} from "../sign-up/sign-up.component";
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-sign-in',
@@ -12,19 +13,36 @@ import {AuthService} from "../../auth.service";
 export class SignInComponent implements OnInit {
 
   formG: FormGroup;
-  constructor(private auth: AuthService, private formBuilder: FormBuilder) {
+
+  constructor(
+    private diologRef: MatDialogRef<SignInComponent>,
+    private dialog: MatDialog,
+    private auth: AuthService,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {
     this.formG = this.formBuilder.group({
-      userName: ['', Validators.required],
-      passWord: ['', [Validators.required, Validators.minLength(8)]],
+      email: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(8)]],
       // , Validators.pattern('^[A-Za-z]')
     });
   }
 
   login() {
-    this.auth.login(this.formG.getRawValue().userName, this.formG.getRawValue().passWord);
+    const ans = this.auth.login(this.formG.getRawValue().email, this.formG.getRawValue().password);
+    if (ans) {
+      this.diologRef.close();
+      this.router.navigate(['../doctors']);
+    }
   }
 
   ngOnInit(): void {
+  }
+
+  signUp(){
+    this.dialog.open(SignUpComponent, {
+      width: '500px'
+    })
   }
 
 }

@@ -1,37 +1,36 @@
 import { Injectable } from '@angular/core';
 import {Router} from "@angular/router";
+import {RequestService} from "./request.service";
+import {SignInComponent} from "./shaired/sign-in/sign-in.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  private users = [];
+  private users: any[] = [];
   private isAuth = false;
-  constructor(private router: Router) {
-    // this.getAllUsers();
+  constructor(private router: Router, private service: RequestService) {
+    this.getAllUsers();
   }
 
-  // getAllUsers() {
-  //   this.service.getAllUsers().subscribe(res => {
-  //     this.users = res;
-  //   });
-  // }
+  getAllUsers() {
+    this.service.getAllUsers().subscribe(res => {
+      this.users = res;
+    });
+  }
 
-  login(userName, password) {
+  login(email: string, password: string): boolean {
+    this.getAllUsers();
     for (let i = 0; i < this.users.length; i++) {
-      if ("serkyn" === userName && "1234" === password) {
+      if (this.users[i].email === email && this.users[i].password === password) {
         this.isAuth = true;
-        localStorage.setItem('userName', this.users[i].userName);
-        alert('Success');
-        this.router.navigate(['../user']);
-        break;
+        localStorage.setItem('email', this.users[i].email);
+        return true;
       }
     }
-    if(this.isAuth == false){
-      alert("Error");
-    }
+    return false;
   }
-
 
   check() {
     if (this.isAuth !== true) {

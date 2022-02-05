@@ -1,32 +1,53 @@
 {
   "users": [
     {
-      "Name": "user",
-      "Surname": "user",
-      "userName": "user",
-      "password": "user123",
-      "id": 3
-    },
-    {
-      "Name": "user1",
-      "Surname": "user1",
-      "userName": "user1",
-      "password": "user123",
-      "id": 4
-    },
-    {
-      "Name": "Shynggys",
-      "Surname": "Yerkyn",
-      "userName": "shyngyse",
-      "password": "password",
+      "name": "shynggys",
+      "surname": "yerkyn",
+      "email": "s.erkyn00@gmail.com",
+      "password": "serkyn00",
       "id": 5
     },
     {
-      "Name": "tdrycfgvuhb",
-      "Surname": "ytuvgbhijnl",
-      "userName": "tfuvygibhjonk",
-      "password": "tuvihbjonl",
+      "name": "Name",
+      "surname": "Surname",
+      "email": "Email",
+      "password": "password",
       "id": 6
+    },
+    {
+      "name": "ASDF",
+      "surname": "ASDF",
+      "email": "ASDF",
+      "password": "ASDF",
+      "id": 7
+    },
+    {
+      "name": "QWE",
+      "surname": "QWE",
+      "email": "QWE",
+      "password": "QWE",
+      "id": 8
+    },
+    {
+      "name": "ZXCV",
+      "surname": "ZXCV",
+      "email": "ZXCV",
+      "password": "ZXCV",
+      "id": 9
+    },
+    {
+      "name": "",
+      "surname": "",
+      "email": "",
+      "password": "",
+      "id": 10
+    },
+    {
+      "name": "QWERT",
+      "surname": "QWERT",
+      "email": "QWERT",
+      "password": "QWERT",
+      "id": 11
     }
   ],
   "admin": [

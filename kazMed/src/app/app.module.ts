@@ -7,12 +7,11 @@ import {MainPageModule} from "./main-page/main-page.module";
 import {ShairedModule} from "./shaired/shaired.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { RouterModule } from '@angular/router';
-import { UserPageComponent } from './user-page/user-page.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserPageComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +19,8 @@ import { UserPageComponent } from './user-page/user-page.component';
     MainPageModule,
     ShairedModule,
     BrowserAnimationsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
