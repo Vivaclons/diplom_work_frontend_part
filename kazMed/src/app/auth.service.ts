@@ -32,22 +32,29 @@ export class AuthService {
     return false;
   }
 
+  checkNav(): boolean{
+    if(!this.isAuth){
+      return true;
+    }
+    return false;
+  }
+
   check() {
-    if (this.isAuth !== true) {
+    if (!this.isAuth) {
       alert('You are not authorized as User. Please return back');
     }
   }
 
   logout() {
     this.isAuth = false;
-    localStorage.removeItem('userName');
+    localStorage.removeItem('email');
     this.router.navigate(['../home']);
   }
 
   isAuthenticated(): Promise<boolean> {
     return new Promise(resolve => {
       setTimeout(() => {
-        if (localStorage.getItem('userName')) {
+        if (localStorage.getItem('email')) {
           this.isAuth = true;
         } else {
           this.isAuth = false;

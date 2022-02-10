@@ -41,7 +41,7 @@
 
 .trust{
   padding-top: 20px;
-  margin-left: 23%;
+  margin-left: 25%;
   margin-right: 15%;
 }
 
@@ -63,3 +63,17 @@
   font-size: 16px;
 }
 
+.dev{
+  color: #00184B;
+  text-align: center;
+}
+
+.dev h1{
+  font-family: Montserrat;
+  font-size: 36px;
+}
+
+.dev p{
+  font-family: Montserrat;
+  font-size: 16px;
+}

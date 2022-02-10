@@ -87,3 +87,9 @@ img{
 .login:hover{
   color: #414BBE;
 }
+
+.liE{
+  display: inline-block;
+  padding-top: 8px;
+  margin-left: 40%;
+}
